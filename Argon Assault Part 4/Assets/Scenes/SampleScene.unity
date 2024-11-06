@@ -627,6 +627,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2200301953905501936, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200301953905501936, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4074395423747812989, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
       propertyPath: laserLeft
       value: 
@@ -639,6 +647,18 @@ PrefabInstance:
       propertyPath: fire.m_Name
       value: Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 4074395423747812989, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074395423747812989, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 2484960310469425845}
+    - target: {fileID: 4074395423747812989, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 2484960310469425844}
     - target: {fileID: 4074395423747812989, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
       propertyPath: fire.m_SingletonActionBindings.Array.size
       value: 1
@@ -795,11 +815,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 7694665664331298794, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7694665664331298794, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+--- !u!1 &2484960310469425844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 335534320602097064, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+  m_PrefabInstance: {fileID: 2484960310469425843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2484960310469425845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8136304615907833010, guid: 32c06be067b8f7b4d80be9396f1d014e, type: 3}
+  m_PrefabInstance: {fileID: 2484960310469425843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

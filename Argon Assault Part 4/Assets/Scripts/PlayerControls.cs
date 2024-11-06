@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 3.5f;
 
-   // [SerializeField] GameObject[] lasers;
+    [SerializeField] GameObject[] lasers;
 
     [SerializeField] float controlPitchFactor = -10f;
     [SerializeField] float positionPitchFactor = -2f;
@@ -90,11 +91,13 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("I'm Shooting");
             if (!laserRight.isPlaying)
             {
+                ActiveLasers();
                 laserRight.Stop();
                 laserRight.Play();
             }
             if (!laserLeft.isPlaying)
             {
+                ActiveLasers();
                 laserLeft.Stop();
                 laserLeft.Play();
             }
@@ -104,12 +107,34 @@ public class PlayerControls : MonoBehaviour
             Debug.Log("I'm not shooting");
             if (laserRight.isPlaying)
             {
-                laserRight.Stop();
+               DeactivateLasers();
+               laserRight.Stop();
             }
             if (laserLeft.isPlaying)
             {
-                laserLeft.Stop();
+                DeactivateLasers();
+               laserLeft.Stop();
             }
+        }
+    }
+
+    void ActiveLasers()
+    {
+        foreach (GameObject laser in lasers)
+        {
+           var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+           emissionModule.enabled = true;
+            laser.SetActive(true);
+        }
+    }
+
+    void DeactivateLasers()
+    {
+        foreach(GameObject laser in lasers)
+        {
+           var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+           emissionModule.enabled = false;
+            laser.SetActive(false);
         }
     }
 }
