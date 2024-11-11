@@ -223,12 +223,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50635856}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 519.81, y: 14.751576, z: 154.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.193024, y: 44.005558, z: -58.83867}
   m_LocalScale: {x: -6.73, y: -6.73, z: -6.73}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 388301754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &50635861
 MonoBehaviour:
@@ -242,6 +242,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ffff28ca50b9b48890369a8ac2b361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 4753057957287343900, guid: a93b298af55d6b441a8ed78b96f04715, type: 3}
+  parent: {fileID: 388301754}
+--- !u!1 &388301753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388301754}
+  m_Layer: 0
+  m_Name: Spawn At Runtime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &388301754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388301753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 497.61697, y: -29.253983, z: 213.13867}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 50635860}
+  - {fileID: 990670629}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +388,7 @@ GameObject:
   - component: {fileID: 990670628}
   - component: {fileID: 990670627}
   - component: {fileID: 990670626}
+  - component: {fileID: 990670630}
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Untagged
@@ -439,13 +475,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990670625}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 514.52, y: 4.8, z: 167.7}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.903046, y: 34.05398, z: -45.438675}
   m_LocalScale: {x: 11.73, y: 9.5, z: -9.89}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 388301754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990670630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990670625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ffff28ca50b9b48890369a8ac2b361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathVFX: {fileID: 4753057957287343900, guid: a93b298af55d6b441a8ed78b96f04715, type: 3}
+  parent: {fileID: 388301754}
 --- !u!1 &1092624271
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,8 +597,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092624271}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 514.8, y: 7.77, z: 195.69582}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 514.8, y: 7.7700005, z: 195.69582}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -606,6 +656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ffff28ca50b9b48890369a8ac2b361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 4753057957287343900, guid: a93b298af55d6b441a8ed78b96f04715, type: 3}
+  parent: {fileID: 388301754}
 --- !u!1 &1194105476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1148,6 @@ SceneRoots:
   - {fileID: 1989571762}
   - {fileID: 2484960310469425843}
   - {fileID: 1194105478}
-  - {fileID: 1092624275}
   - {fileID: 1322663598756010828}
-  - {fileID: 990670629}
-  - {fileID: 50635860}
+  - {fileID: 1092624275}
+  - {fileID: 388301754}
